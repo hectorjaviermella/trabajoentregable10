@@ -4930,3 +4930,179 @@ debug: POST en /api/carts/649da54f35f1c25c22510336/product/649d7c8efee1b9fd8d4e9
 debug: entro al addProductToCart
 debug: GET en /api/carts/649da54f35f1c25c22510336 - 7/12/2023 - 11:30:37 AM
 debug: entro al getCardId
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:00:48 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:05:57 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:07:42 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:08:42 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:09:56 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:10:35 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:12:13 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:12:54 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:22:09 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:22:42 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:23:21 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:24:28 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:25:12 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:25:58 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:26:54 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:30:06 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:31:37 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:33:02 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:36:43 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:38:25 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:42:04 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:42:49 PM
+debug: entro al purchase
+debug: GET en /api/products/6430dfa8460949d0f5de1eae - 7/12/2023 - 12:45:42 PM
+debug: Server runing at port 8080
+debug: GET en /api/products/6430dfa8460949d0f5de1eae - 7/12/2023 - 12:46:18 PM
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/products/6430dfa8460949d0f5de1eae - 7/12/2023 - 12:48:45 PM
+debug: Server runing at port 8080
+debug: GET en /api/products/6430dfa8460949d0f5de1eae - 7/12/2023 - 12:49:06 PM
+debug: Server runing at port 8080
+debug: GET en /api/products/6430dfa8460949d0f5de1eae - 7/12/2023 - 12:49:50 PM
+debug: Server runing at port 8080
+debug: GET en /api/products/6430dfa8460949d0f5de1eae - 7/12/2023 - 12:50:15 PM
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 12:51:08 PM
+debug: entro al getCardId
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 12:52:30 PM
+debug: entro al getCardId
+debug: GET en /api/products/6430dfa8460949d0f5de1eae - 7/12/2023 - 12:52:41 PM
+debug: Server runing at port 8080
+debug: GET en /api/products/6430dfa8460949d0f5de1eae - 7/12/2023 - 12:53:10 PM
+debug: GET en /api/products/6430dfa8460949d0f5de1eae - 7/12/2023 - 12:53:17 PM
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/products/649d84685c3d190a7b9b0ea9 - 7/12/2023 - 12:55:08 PM
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:55:52 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:57:13 PM
+debug: entro al purchase
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/purchase - 7/12/2023 - 12:59:31 PM
+debug: entro al purchase
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 12:59:52 PM
+debug: entro al getCardId
+debug: GET en /api/products/ - 7/12/2023 - 1:00:10 PM
+debug: entro a getProducts
+debug: GET en /api/products/?limit=10&page=1&pStatus=true&pCategory=bebida&sort=-1 - 7/12/2023 - 1:00:19 PM
+debug: entro a getProducts
+debug: GET en /api/products/649d84685c3d190a7b9b0ea9 - 7/12/2023 - 1:00:23 PM
+debug: PUT en /api/carts/649da54f35f1c25c22510336/product/649d84075c3d190a7b9b0ea5 - 7/12/2023 - 1:00:48 PM
+debug: entro al updateQuantitytoProductToCart
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 1:01:00 PM
+debug: entro al getCardId
+debug: DELETE en /api/carts/649da54f35f1c25c22510336/product/649d7c8efee1b9fd8d4e94ea - 7/12/2023 - 1:01:16 PM
+debug: entro al deleteProductToCard
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 1:01:19 PM
+debug: entro al getCardId
+debug: DELETE en /api/carts/649da54f35f1c25c22510336/product/64ac0ba40309e5cb938ccf96 - 7/12/2023 - 1:01:39 PM
+debug: entro al deleteProductToCard
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 1:01:42 PM
+debug: entro al getCardId
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 1:04:13 PM
+debug: entro al getCardId
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 1:05:11 PM
+debug: entro al getCardId
+debug: Server runing at port 8080
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 1:06:19 PM
+debug: entro al getCardId
+debug: PUT en /api/carts/649da54f35f1c25c22510336 - 7/12/2023 - 1:06:27 PM
+debug: entro al updatetoListProducToCart
+debug: POST en /api/carts/649da54f35f1c25c22510336/product/649d7c8efee1b9fd8d4e94ea - 7/12/2023 - 1:06:27 PM
+debug: entro al addProductToCart
+debug: Server runing at port 8080
+debug: PUT en /api/carts/649da54f35f1c25c22510336 - 7/12/2023 - 1:07:50 PM
+debug: entro al updatetoListProducToCart
+debug: POST en /api/carts/649da54f35f1c25c22510336/product/649d7c8efee1b9fd8d4e94ea - 7/12/2023 - 1:07:50 PM
+debug: entro al addProductToCart
+debug: Server runing at port 8080
+debug: PUT en /api/carts/649da54f35f1c25c22510336 - 7/12/2023 - 1:08:20 PM
+debug: entro al updatetoListProducToCart
+debug: POST en /api/carts/649da54f35f1c25c22510336/product/649d7c8efee1b9fd8d4e94ea - 7/12/2023 - 1:08:20 PM
+debug: entro al addProductToCart
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 1:08:29 PM
+debug: entro al getCardId
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: PUT en /api/carts/649da54f35f1c25c22510336/product/649d7c8efee1b9fd8d4e94ea - 7/12/2023 - 1:10:24 PM
+debug: entro al updateQuantitytoProductToCart
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 1:10:39 PM
+debug: entro al getCardId
+debug: Server runing at port 8080
+debug: GET en /api/products/ - 7/12/2023 - 1:11:24 PM
+debug: entro a getProducts
+debug: GET en /api/carts/649da54f35f1c25c22510336/ - 7/12/2023 - 1:11:50 PM
+debug: entro al getCardId
+debug: GET en /api/products/649d84075c3d190a7b9b0ea5 - 7/12/2023 - 1:12:02 PM
+debug: GET en /api/products/ - 7/12/2023 - 1:12:52 PM
+debug: entro a getProducts
+debug: DELETE en /api/products/64a336f56e271d90cdbc13d4 - 7/12/2023 - 1:13:20 PM
+debug: DELETE en /api/products/64a336f56e271d90cdbc13d4 - 7/12/2023 - 1:13:48 PM
+debug: Server runing at port 8080
+debug: Server runing at port 8080
+debug: Server runing at port 8080

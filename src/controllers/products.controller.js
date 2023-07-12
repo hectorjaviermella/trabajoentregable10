@@ -176,8 +176,8 @@ export  async function deleteProduct(req, res) {
      const { pId } = req.params;
      let result=null;
        
-    // console.log("producto a borrar xx: " , pId);
-      //console.log("usuario " ,  req.session.user.email);
+    //console.log("producto a borrar xx: " , pId);
+    //console.log("usuario " ,  req.session.user.email);
 
 
       const usuarioemail= req.session.user.email;

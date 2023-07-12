@@ -7,7 +7,7 @@ export default class CartsRepository {
 ////////////////////////////////////////////////////////////////////////////  
     async getCarts() {
       try {
-        console.log("entor carts repository");
+       
        const carts = await this.dao.getCarts();      
       
        
@@ -20,7 +20,7 @@ export default class CartsRepository {
 async getCartsById(cId) {
   try {
        
-
+   
     const cart = await this.dao.getCartsById(cId);
     return cart;
   } catch (error) {
@@ -41,7 +41,7 @@ async addCartVacio(cartData) {
 async createCart(cart) {
   try {
     //const cart = new cartModel(cartData);
-    console.log("createCart reposi");
+   
     const createdCart = await this.dao.createCart(cart);
     return createdCart;
   } catch (error) {
@@ -124,7 +124,8 @@ async addProductToCart(cId,pId,pquantity){
   
 async deleteProductToCart(cId,pId){
   try {
-    
+   
+      
       let result="";
       let tempcarrito = await  this.dao.getCartsById(cId); 
       if (tempcarrito)
@@ -166,7 +167,7 @@ async updatetoListProducToCart(cId,listproduc){
 
       if (cart)
            {
-            console.log("encontro el cart xx " , cart);
+       
             //recorro cada elemento de la lista a agregar
             for (let i = 0; i < listproduc.length ; i++) {
                       //lista de elementos del carrito

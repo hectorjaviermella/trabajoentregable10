@@ -44,18 +44,17 @@ async deleteTicket(tId) {
   //////////////////////////////////////////////////////////////////////////////////////////////
   async createTicket(cId) {
     try {
-        console.log("createTicket  ticket.service" , cId);
+        c
 
         // Genera un código de cadena único utilizando Faker.js
           //const codigoUnico = faker.random.uuid();
           const codigoUnico = faker.lorem.word();
 
         //recuperar el carrito con los productos 
-        const cart = await cartRepository.getCartsById(cId);
-        const user = await userRepository.getUsersById(cId);
+        const cart = await cartRepository.getCartsById(cId);        
 
-        
-       
+        const user = await userRepository.getUsersByCartId(cId);  
+                
         let productscar = cart.products;
        
        let amount=0;
@@ -65,14 +64,15 @@ async deleteTicket(tId) {
      
        //recorro los productos del carrito
        for (let i = 0; i < productscar.length; i++) {
-        
+     
         let productcar = productscar[i];     
-        console.log("antes getProductsById " , productcar);   
+ 
         //recupero el producto original
         let valor = productcar.pId._id;
-        
-        let productstock = await productRepository.getProductsById(valor);  
-        console.log("despues getProductsById " , productstock);   
+  
+        let productstock = await productRepository.getProductsById(valor); 
+
+       // console.log("despues getProductsById " , productstock);   
         //comparo stock
        if ((productstock.pStock - productcar.quantity)>=0){
                 //hay stock para la venta

@@ -19,7 +19,8 @@ export default class UsersRepository {
   //////////////////////////////////////////////////////////////////////////  
   async getUsersById(uid){
       try {
-      
+       console.log("getUsersById  en users.repository",uid);
+
         const users = await this.dao.getUsersById(uid);
         
         return users;
@@ -27,6 +28,19 @@ export default class UsersRepository {
         throw new Error('Error retrieving the users from the database.');
       }
     };
+
+      //////////////////////////////////////////////////////////////////////////  
+  async getUsersByCartId(cId){
+    try {
+    
+
+      const users = await this.dao.getUsersByCartId(cId);
+      
+      return users;
+    } catch (error) {
+      throw new Error('Error retrieving the users from the database.');
+    }
+  };
       //////////////////////////////////////////////////////////////////////////  
   async getUserRole(role){
     try {

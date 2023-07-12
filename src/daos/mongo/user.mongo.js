@@ -15,9 +15,19 @@ class User {
     
     return user;
   };
+
+  ///////////////////////////////////////////////////////
+  getUsersByCartId = async (cid) => {
+    
+    const user = await userModel.findOne({ cart: cid}).lean();  
+    
+    return user;
+  };
+
+  
   ///////////////////////////////////////////////////////
   getUserRole = async (role) => {
-    console.log("getuserrole  mongo" , role);
+  
     const user = await userModel.findById({ role: role}).lean();  
     
     return user;

@@ -21,11 +21,11 @@ class Product {
 //////////////////////////////////////////////////////////////////////////  
 async getProductsById(pId){
 try {
-   console.log("getProductsById product.mongo" , pId);
+  
  
-  const products = await productModel.findById({ _id: pId.pId });
+  const products = await productModel.findById({ _id: pId ,lean:true });
 
- //  console.log("getProductsById result xx " , products);
+  
   return products;
 } catch (error) {
   console.log(error);

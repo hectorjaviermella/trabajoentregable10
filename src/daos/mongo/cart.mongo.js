@@ -26,6 +26,7 @@ async getCarts() {
 async getCartsById(cId) {
 try {
  
+   
 
 const cart = await cartModel.findById({ _id: cId ,lean:true }).populate("products.pId");
 
@@ -58,7 +59,7 @@ throw new Error('Error creating the cart.');
 ////////////////////////////////////////////////////////////////////////////
 async addProductToCart(cId,pId,pquantity){
 try {
-console.log(" addProductToCart del cart.mongo");
+
 let result;
 //recupero el carrito
 const cart = await cartModel.findById({ _id: cId });
@@ -129,7 +130,7 @@ try {
               return result;
              }else{
               //no encontrado producto
-              return result("No exist product");                                    
+              return false;                                    
              }
        }else{
          //no existe el carrito
@@ -193,7 +194,7 @@ console.log(error);
 ////////////////////////////////////////////////////////////////////////////
 async updatetoListProducToCart(cId,listproduc) {
 try {
-    console.log("updatetoListProducToCart");
+  
   let result="";
 
   let cart = await this.dao.findOne({ _id: cId });

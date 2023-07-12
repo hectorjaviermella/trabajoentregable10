@@ -57,13 +57,12 @@ export async function addProductToCart(req, res) {
         const cId = req.params.cId;
         const pId  = req.params.pId;
 
-       console.log("parametro " , cId);
-       console.log("parametro " , pId);
-
+       
        
     
-        let product = await productsService.getProductsById({pId});
-      
+        let product = await productsService.getProductsById(pId);
+       
+
        if (!user===undefined){
          if (user.email=== product.pOwner && user.role==='premium')  {
           console.log("usuario premiun no  puede agregar un producto que le pertenece ");

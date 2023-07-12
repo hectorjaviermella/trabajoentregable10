@@ -19,7 +19,7 @@ export default class ProductsRepository {
 //////////////////////////////////////////////////////////////////////////  
 async getProductsById(pId){
     try {
-      console.log("getprocutsbyid en product.repository " , pId);
+     
       const products = await this.dao.getProductsById(pId);
       return products;
     } catch (error) {
@@ -51,7 +51,7 @@ async deleteProduct(pId){
 /////////////////////////////////////////////////////////////////////////////////////
 async updateProducto(pId,productonuevo){
     try {
-    
+      console.log("entro a updateproducto  del procut.repository"  , pId, productonuevo);
     
       const createdProduct = await this.dao.updateProducto( pId , productonuevo);
       return createdProduct;
