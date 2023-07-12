@@ -70,7 +70,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "components/requestBodies/updateCart"   
+                $ref: "components/requestBodies/productTothecart"   
   
   /api/carts/:
       post:
@@ -117,52 +117,52 @@ paths:
             content:
               application/json:
                 schema:
-                  $ref: "#components/requestBodies/updateCart"
+                  $ref: "#components/requestBodies/updateQuantity"
       post:
-        summary: Agrega  un producto al  carrito
+          summary: Agrega  un producto al  carrito
+          tags:
+            - Carts:
+          parameters:
+            - name: cId
+              in: path
+              required: true
+              description: Id del carrito a modificar
+              schema:
+                $type: string
+            - name: pId
+              in: path
+              required: true
+              description: Id del producto a agregar 
+              schema:
+                $type: string           
+          responses:
+            "200":
+              description: Producto agregado correctamente al carrito
+              content:
+                application/json:
+                  schema:
+                    $ref: "#components/schemas/Cart"
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: "#components/requestBodies/updateQuantity"
+      delete: 
+        summary: Elimina un producto del carrito 
         tags:
           - Carts:
         parameters:
-          - name: pid
-            in: path
-            required: true
-            description: Id del producto a agregar 
-            schema:
-              $type: string
-          - name: cid
+          - name: cId
             in: path
             required: true
             description: Id del carrito a modificar
             schema:
-              $type: string
-        responses:
-          "200":
-             description: Producto agregado correctamente al carrito
-             content:
-               application/json:
-               schema:
-                 $ref: "#components/schemas/Cart"
-        requestBody:
-          required: true
-          content:
-            application/json:
-              schema:
-                $ref: "#components/requestBodies/productTothecart"
-      delete: 
-        summary: Elimina un producto del carrito especifico
-        tags:
-          - Carts:
-        parameters:
-          - name: pid
-            in: path
-            required: true
-            description: Id of the product to obtain
-            schema:
               $type: String
-          - name: cid
+          - name: pId
             in: path
             required: true
-            description: Id of the cart to obtain
+            description: Id del producto a borrar
             schema:
               $type: String
         responses:
@@ -224,31 +224,24 @@ components:
         id:
           type: string
           description: Descripcion de los productos comprados / no comprados         
-
-
   requestBodies:
-    updateCart:
-        type: object
-        properties:
-          quantity:
-             type: Number
-             description: Cantidad de el producto
-          pId:
-             type: ObjectId
-             $ref: '#/components/schemas/Product'
-          
-        example:
-          quantity : 1
-          pId: ObjectId("649d7bf2fee1b9fd8d4e94e8")
-    updateQuantity:
-        type: object
-        properties:
-          quantity:
-             type: Number
-             description: Cantidad de el producto         
-        example:
-          quantity : 1
-
+    productTothecart:
+      type: object
+      properties:
+        pId:
+          type: String
+        quantity:
+          type: Number
+  
+    updateQuantity:   
+      type: object
+      properties:
+        quantity:
+          type: Number
+      example:
+        {
+          quantity: 1
+        }
     tickets:
             type: object
             properties:

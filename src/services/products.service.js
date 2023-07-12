@@ -15,6 +15,7 @@ export default class ProductsService {
 
 ////////////////////////////////////////////////////////////////////////
 async getProductsById(pId) {
+   
     const product = await productRepository.getProductsById(pId);
     return product;
   }

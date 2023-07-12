@@ -1,4 +1,6 @@
 import { productModel } from "./model/product.js";
+import  { ObjectId }   from "mongodb";
+//const { Types } = mongoose;
 
 class Product {
   constructor() {}
@@ -19,8 +21,11 @@ class Product {
 //////////////////////////////////////////////////////////////////////////  
 async getProductsById(pId){
 try {
-  
-   const products = await productModel.findById({ _id: pId ,lean:true}).lean();
+   console.log("getProductsById product.mongo" , pId);
+ 
+  const products = await productModel.findById({ _id: pId.pId });
+
+ //  console.log("getProductsById result xx " , products);
   return products;
 } catch (error) {
   console.log(error);
@@ -45,7 +50,7 @@ async deleteProduct(pId){
 try {
     let result = await  productModel.deleteOne({ _id: pId });
   return result;
-} catch (error) {
+} catch (error) {getProductsById
   console.log(error);
 }
 };

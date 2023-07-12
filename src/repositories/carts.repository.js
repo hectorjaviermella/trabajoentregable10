@@ -48,8 +48,6 @@ async createCart(cart) {
     throw new Error('Error creating the cart.');
   }
 }
-////////////////////////////////////////////////////////////////////////////
-
 
 ////////////////////////////////////////////////////////////////////////////
 async updateCart(cId,cartnuevo) {
@@ -75,7 +73,7 @@ async deleteCart(cId) {
 
 async  updateQuantitytoProductToCart(cId,pId,pquantity){
   try {
-    console.log("entor a updateQuantitytoProductToCart ", cId ,pId, pquantity );
+ 
     let result = await this.dao.updateQuantitytoProductToCart(cId,pId,pquantity);
      
      
@@ -87,11 +85,12 @@ async  updateQuantitytoProductToCart(cId,pId,pquantity){
 ////////////////////////////////////////////////////////////////////////////
 async addProductToCart(cId,pId,pquantity){
   try {
- 
+  
       let result;
     //recupero el carrito
-    const cart = await this.dao.getCartsById({ _id: cId });
-   
+    
+    const cart = await this.dao.getCartsById( cId );
+    
     if (cart=== undefined){
       return  "No existe el carrito";
    };
@@ -120,4 +119,45 @@ async addProductToCart(cId,pId,pquantity){
     console.log(error);
   }
 };
+
+////////////////////////////////////////////////////////////////////////////////
+  
+async deleteProductToCart(cId,pId){
+  try {
+    
+      let result="";
+      let tempcarrito = await  this.dao.getCartsById(cId); 
+      if (tempcarrito)
+           {
+            let productstocart = tempcarrito.products;     
+          
+           let indiceProducto = productstocart.findIndex((product) => product.pId._id.equals(pId));               
+            if (indiceProducto>=0)
+                 {//encontrado el producto   
+                               
+                
+                  result= await this.dao.deleteProductToCart(cId,pId );
+                  return result;
+                 }else{
+                  //no encontrado producto
+                 
+                  
+                  return result=false;                                 
+                 }
+           }else{
+             //no existe el carrito
+             return result="No exist cart";
+           }
+      
+    //return result;
+  } catch (error) {
+    console.log(error);
+  }
+};  
+
+
+
+
+
   }  
+

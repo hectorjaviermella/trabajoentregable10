@@ -34,6 +34,7 @@ async createCart(cart) {
  async deleteProductToCart(cId,pId) {
   
     const deleteCart = await cartRepository.deleteProductToCart(cId,pId);
+    
     return deleteCart;
   }
 
@@ -41,6 +42,7 @@ async createCart(cart) {
 ////////////////////////////////////////////////////////////////////////
 
 async updateQuantitytoProductToCart(cId,pId,pquantity) {
+
   const cart = await cartRepository.updateQuantitytoProductToCart(cId,pId,pquantity);
   return cart;
 }

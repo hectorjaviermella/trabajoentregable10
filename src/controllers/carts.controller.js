@@ -55,11 +55,17 @@ export async function addProductToCart(req, res) {
         if (!req.body)
             pquantity = req.body;      
         const cId = req.params.cId;
-        const pId = req.params.pId;
+        const pId  = req.params.pId;
+
+       console.log("parametro " , cId);
+       console.log("parametro " , pId);
+
+       
     
-        let product = await productsService.getProductsById(pId);
+        let product = await productsService.getProductsById({pId});
       
-         if (user.email=== product.pOwner && user.role==='premium') {
+       if (!user===undefined){
+         if (user.email=== product.pOwner && user.role==='premium')  {
           console.log("usuario premiun no  puede agregar un producto que le pertenece ");
           return  res.send({
             status: "Noautorizado",
@@ -67,7 +73,9 @@ export async function addProductToCart(req, res) {
            
           });
          }
-
+       }
+      
+       
         if  (product && product.pStock>0){
             let created =  await cartsService.addProductToCart(cId,pId,pquantity);    
             return res.send({
@@ -90,11 +98,11 @@ export async function addProductToCart(req, res) {
 //////////////////////////////////////////////////////////////////////////////////////
 //elimina todo los productos del carrito
 
-export function deleteCardId(req, res) { 
+export async function deleteCardId(req, res) { 
   try {
         req.logger.debug('entro al deleteCardId');
         const { cId } = req.params;
-        let result =  cartsService.deleteCart(cId);
+        let result =  await cartsService.deleteCart(cId);
         if (!result) {
           return res
             .status(404).send({
@@ -115,13 +123,14 @@ export function deleteCardId(req, res) {
 };
   ////////////////////////////////////////////////////////////////////////////////////////////////
 //elimina un producto del carrito especifico
-export function deleteProductToCard(req, res) { 
+export async function deleteProductToCard(req, res) { 
   try {
     req.logger.debug('entro al deleteProductToCard');
            
         const cId = req.params.cId;
         const pId = req.params.pId;
-        let result =  cartsService.deleteProductToCart(cId,pId);
+        let result = await cartsService.deleteProductToCart(cId,pId);
+       
         if (!result) {
           return res
             .status(404).send({
@@ -204,6 +213,7 @@ export function updatetoListProducToCart(req, res) {
     try {
       req.logger.debug('entro al purchase'); 
         const cId = req.params.cId;    
+        console.log("purchase carts.controller" , cId);
         const ticket = await ticketService.createTicket(cId);
         return res.send({ status: "success", payload: ticket });
     } catch (error) {
