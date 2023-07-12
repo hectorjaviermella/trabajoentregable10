@@ -155,7 +155,57 @@ async deleteProductToCart(cId,pId){
   }
 };  
 
+///////////////////////////////////////////////////////////////////////////////////////////////////  
+async updatetoListProducToCart(cId,listproduc){
+  try {
+    
+      let result="";
+      
+      let cart = await  this.dao.getCartsById(cId );
+   
 
+      if (cart)
+           {
+            console.log("encontro el cart xx " , cart);
+            //recorro cada elemento de la lista a agregar
+            for (let i = 0; i < listproduc.length ; i++) {
+                      //lista de elementos del carrito
+                        let productstocart = cart.products;  
+                        let productemp =listproduc[i];                         
+                        let pId=productemp.pId;                            
+                  
+                        let indiceProducto = await productstocart.findIndex((product) => product.pId.toString() === pId.toString());                          
+                        
+                        if(indiceProducto <0){//insertarlo 
+                            //console.log("elemento no encontrado",productemp.pId);  
+                            let newquantity = productemp.quantity;                          
+                            const updateResponse = await fetch(`http://localhost:8080/api/carts/${cId}/product/${productemp.pId}`,{
+                            method:'POST',
+                            headers: { 'Content-Type': 'application/json'},
+                            body: JSON.stringify({quantity:newquantity})
+                          });       
+                        }else{ //actualizar la cantidad
+                          //console.log("elemento  encontrado",productemp.pId);
+                          let newquantity = cart.products[indiceProducto].quantity +1;
+                          const updateResponse = await fetch(`http://localhost:8080/api/carts/${cId}/product/${productemp.pId}`,{
+                            method:'PUT',
+                            headers: { 'Content-Type': 'application/json'},
+                            body: JSON.stringify({quantity:newquantity})
+                          });         
+                       
+                        }               
+               }  //ford         
+               return result="Product modificado";
+           }else{
+             //no existe el carrito
+             return result="No exist cart";
+           }
+      
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 
 

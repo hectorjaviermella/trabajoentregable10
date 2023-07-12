@@ -52,7 +52,7 @@ paths:
         tags:
           - Carts:
         parameters:
-          - name: cid
+          - name: cId
             in: path
             required: true
             description: id es del carrito a actualizar
@@ -64,13 +64,13 @@ paths:
             content:
               application/json:
                 schema:
-                  $ref: "#components/schemas/Cart"
+                  $ref: "#components/schemas/Cart"        
         requestBody:
-          required: true
-          content:
-            application/json:
-              schema:
-                $ref: "components/requestBodies/productTothecart"   
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: "#components/requestBodies/productTothecart" 
   
   /api/carts/:
       post:
@@ -182,7 +182,7 @@ paths:
           - name: cid
             in: path
             required: true
-            description: Id del carrito a modificar
+            description: Id del carrito a generar el ticket
             schema:
               $type: String
         responses:
@@ -230,14 +230,21 @@ components:
       properties:
         pId:
           type: String
+          description: Id del producto
         quantity:
           type: Number
-  
+          description: Cantidad de producto
+      example:
+        {
+          pId:"649d7c8efee1b9fd8d4e94ea" 
+          quantity: 1
+        }
     updateQuantity:   
       type: object
       properties:
         quantity:
           type: Number
+          description: Cantidad de producto
       example:
         {
           quantity: 1

@@ -69,7 +69,9 @@ async deleteTicket(tId) {
         let productcar = productscar[i];     
         console.log("antes getProductsById " , productcar);   
         //recupero el producto original
-        let productstock = await productRepository.getProductsById(productcar.pId._id);  
+        let valor = productcar.pId._id;
+        
+        let productstock = await productRepository.getProductsById(valor);  
         console.log("despues getProductsById " , productstock);   
         //comparo stock
        if ((productstock.pStock - productcar.quantity)>=0){
